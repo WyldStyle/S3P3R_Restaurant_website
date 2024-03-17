@@ -1,0 +1,24 @@
+.outer{
+width: 100%;
+height: 100%;
+}
+.header{
+  background-color: rgb(27, 117, 195);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.heading{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin: 1rem;
+  margin-bottom: 2rem;
+}
+.cart{
+  margin-right: 3rem;
+}
+.welcomeImg{
+}
+#welcomeImg{
+  height: 20rem;
+  width: 100%;
+}
