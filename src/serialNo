@@ -1,0 +1,19 @@
+1. App
+2. Header
+3. HeaderCartButton
+4. CartIcon
+5.MealsSummary
+6. Available MealsSummary
+7. Meals
+8. Card
+9. MealItem
+10. MealItemForm
+11. Input
+
+
+App > Header
+    > Meals > MealsSummary
+            > Hotel > HotelList > AvailableMeals > MealItem > MealItemForm > Input
+
+                          
+         
