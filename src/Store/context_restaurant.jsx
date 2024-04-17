@@ -19,10 +19,11 @@ const defaultCartState = {
 }
 
 const cartReducer = (state, action) => {
+  console.log('in cart Reducer',state,action,'\n',state.totalAmount, action.item);
   switch (action.type) {
     case 'Add': {
       const updatedItems = state.items.concat(action.item);
-      const updatedTotalAmount = state.totalAmount + action.item.price * action.item.amount;
+      const updatedTotalAmount = state.totalAmount + Number(action.item.meal_price) * action.item.amount;
       return {
         items: updatedItems,
         totalAmount: updatedTotalAmount
@@ -61,6 +62,7 @@ const RestaurantContextProvider = ({ children }) => {
   const [cartArrState, dispatchCartAction] = useReducer(cartReducer, defaultCartState);
 
   const addItemToCart = (item) => {
+    console.log('context Add to cart',item);
     dispatchCartAction({ type: 'Add', item: item })
   }
 

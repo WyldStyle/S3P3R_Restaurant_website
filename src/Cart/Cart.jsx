@@ -7,13 +7,18 @@ const Cart = (props) => {
 
 const {cartArrState} = useContext(RestaurantContext);
 
+// console.log('Cart',cartArrState);
+
   const cartItems = <ul>
     {
-      cartArrState.items.map((item) => (<li>{item.name}</li>)
+      cartArrState.items.map((item) => {
+        // console.log('item si',item);
+        return (<li>{item.meal_name}</li>)}
       )
     }
   </ul>
-
+// console.log('Cart map',cartItems);
+const hasItems = cartArrState.items.length > 0
   return (
     <Modal>
       {
@@ -21,11 +26,11 @@ const {cartArrState} = useContext(RestaurantContext);
       }
       <div>
         <span>Total Amount</span>
-        <span>{cartArrState.totalAmount }</span>
+        <span>{cartArrState.totalAmount.toFixed(2) }</span>
       </div>
       <div>
         <button onClick={props.onClose}>Close</button>
-        <button>Order</button>
+        {hasItems && <button>Order</button>}
       </div>
     </Modal>
   )

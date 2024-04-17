@@ -16,6 +16,10 @@ const MealItem = ({ key,single_meal}) => {
       ...single_meal,
       amount: amount
     })
+    console.log('in Meal item',{
+      ...single_meal,
+      [amount]:amount
+    });
   }
   return (
     <div>
